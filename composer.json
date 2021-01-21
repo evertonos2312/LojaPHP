@@ -1,0 +1,17 @@
+{
+    "name": "tomxd/loja-php",
+    "description": "Loja Online em PHP",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Everton Silva",
+            "email": "everton.oliveirasilva@outlook.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "core\\" : "core/"
+        }
+    }
+}
