@@ -2,10 +2,23 @@
 
 namespace core\controladores;
 
+use core\classes\Functions;
+
 class Main{
 
     public function index(){
-        echo 'MAIN!!!!!!';
+        $clientes = ['joao', 'ana', 'carlos'];
+
+        $dados = [
+            'titulo' => 'Este é o título',
+            'clientes' => ['joao', 'ana', 'carlos']
+        ];
+
+        Functions::Layout([
+            'layouts/html_header',
+            'pagina_inicial',
+            'layouts/html_footer',
+        ], $dados);
     }
 
 
