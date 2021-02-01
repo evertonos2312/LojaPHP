@@ -3,6 +3,9 @@
 $routes = [
     'home' => 'main@index',
     'loja' => 'main@loja',
+    'novo_cliente' => 'main@novo_cliente',
+    'criar_cliente' => 'main@criar_cliente',
+    'carrinho' => 'main@carrinho',
 ];
 
 $acao = 'home';
