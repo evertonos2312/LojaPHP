@@ -25,5 +25,10 @@ class Store{
         
         return (isset($_SESSION['cliente']));
     }
+
+    public static function criarHash($num_char = 12){
+        $chars = '0123456789abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        return substr(str_shuffle($chars), 0, $num_char);
+    }
     
 }

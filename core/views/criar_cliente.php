@@ -9,7 +9,7 @@
             <form action="?a=criar_cliente" method="post">
                 <div class="my-3">
                     <label>Email</label>
-                    <input type="email" name="text_email" placeholder="Email" class="form-control" required>
+                    <input type="email" name="email" placeholder="Email" class="form-control" required>
                 </div>
                 <div class="my-3">
                     <label>Senha</label>
@@ -33,11 +33,11 @@
                 </div>
                 <div class="my-3">
                     <label>Cidade</label>
-                    <input type="text" name="estado" placeholder="Cidade" class="form-control" required>
+                    <input type="text" name="cidade" placeholder="Cidade" class="form-control" required>
                 </div>
                 <div class="my-3">
                     <label>Celular</label>
-                    <input type="text" name="telefone" placeholder="Celular" class="form-control">
+                    <input type="text" name="celular" placeholder="Celular" class="form-control">
                 </div>
                 <div class="my-4">
                     <input type="submit" value="Criar conta" class="btn btn-primary">

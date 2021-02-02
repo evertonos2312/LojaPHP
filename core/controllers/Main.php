@@ -1,14 +1,14 @@
 <?php
 
-namespace core\controladores;
+namespace core\controllers;
 
 use core\classes\Database;
 use core\classes\Store;
+use core\models\Clientes;
 
 class Main{
 
     public function index(){
-
 
         Store::Layout([
             'layouts/html_header',
@@ -76,19 +76,18 @@ class Main{
             return;
         }
 
-        $bd = new Database();
-        $parametros = [
-            ':e' => strtolower(trim($_POST['text_email']))
-        ];
-        $resultados = $bd->select("
-        SELECT email from clientes WHERE email = :e", $parametros);
+       $cliente = new Clientes();
 
-        if(count($resultados) != 0){
+       if($cliente->getEmail($_POST['email'])){
             $_SESSION['erro'] = 'Já existe um cliente com este email';
 
             $this->novo_cliente();
             return;
-        }
+       }
+        $purl = $cliente->saveCliente();
+        $link_purl = "http://localhost/?a=confirmar_email&purl=$purl";
+        
+
 
         
     }
